@@ -1,0 +1,51 @@
+{
+  "name": "desktop captrue",
+  "version": "2",
+  "author": "lduoduo",
+  "manifest_version": 2,
+  "minimum_chrome_version": "34",
+  "icons": {
+    "16": "assets/desktop.png",
+    "128": "assets/desktop.png"
+  },
+  "homepage_url": "https://ldodo.cc/",
+  "background": {
+    "scripts": [
+      "content.rtc.dodo.js",
+      "desk-capture.js",
+      "background.js",
+      "test.js"
+    ],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*/*"
+      ],
+      // "css": ["mystyles.css","my.css"],
+      "js": [
+        "content.rtc.dodo.js",
+        "content.screenshare.dodo.js"
+      ]
+    }
+  ],
+  "browser_action": {
+    // "default_icon": "assets/desktop.png",
+    "default_title": "desktop captrue"
+    // "default_popup": "popup.html"
+  },
+  "permissions": [
+    "contextMenus",
+    "desktopCapture",
+    "storage",
+    "tabs",
+    "<all_urls>",
+    "tabCapture",
+    "activeTab"    
+  ]
+  // "options_ui":{
+  //     "page":"popup.html",
+  //     "chrome_style":true
+  //  }
+}
