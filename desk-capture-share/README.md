@@ -22,6 +22,6 @@ use webrtc to transform mediastream, this need a further socket server to help y
 
 
 ### Screenshot
-![screenshot](/assets/image.png)
+![screenshot](https://github.com/lduoduo/my-chrome-extensions/blob/master/desk-capture-share/assets/image.png?raw=true)
 
 
