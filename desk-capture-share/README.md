@@ -22,6 +22,6 @@ use webrtc to transform mediastream, this need a further socket server to help y
 
 
 ### Screenshot
-![screenshot](http://photo.weibo.com/1960398382/wbphotos/large/mid/4122687603585008/pid/74d94e2egy1fgxx8orjpnj20yf0lqtm1)
+![screenshot](/assets/image.png)
 
 
