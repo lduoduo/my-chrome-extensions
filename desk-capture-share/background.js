@@ -44,7 +44,12 @@ chrome.runtime.onMessage.addListener(
         if (request.extensionId !== extensionId) return
         senderInfo = sender
 
-        captureManager.start(BG.captureDesktopSuccess.bind(BG), BG.captureDesktopFail.bind(BG));
+        captureManager.init({
+            cbSuccess: BG.captureDesktopSuccess.bind(BG),
+            cbFail:BG.captureDesktopFail.bind(BG),
+            type: request.type
+        });
+
         captureManager.on('streamend', BG.captureDesktopEnd.bind(BG));
 
         BG.callback({ from: "server", extensionId, response: { code: 200, supportedEventList } });

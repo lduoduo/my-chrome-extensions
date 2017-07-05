@@ -9,7 +9,7 @@ let map = {
 
 let home = {
     onClient(data) {
-        let {extensionId, command} = data
+        let {extensionId, type} = data
         console.log("Content script received data from client --->  ", data);
         console.log('send message to background')
         // port.postMessage(data, function(response) {
@@ -59,7 +59,7 @@ window.addEventListener("message", function (event) {
 
     // console.log('content script get：', event)
     // 非约定的直接忽略
-    if (!event || !event.data || !event.data.from || !event.data.extensionId || !event.data.command) return
+    if (!event || !event.data || !event.data.from || !event.data.extensionId || !event.data.type) return
     let {from} = event.data
     let clientExtensionId = event.data.extensionId
 
